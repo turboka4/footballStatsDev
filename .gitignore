@@ -5,3 +5,7 @@
 
 *.class
 *.war
+
+# idea stuff
+.idea
+*.iml
