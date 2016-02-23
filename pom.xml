@@ -4,13 +4,13 @@
 						http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gus.football</groupId>
-    <artifactId>footballApp</artifactId>
+    <groupId>com.gus.footballStats</groupId>
+    <artifactId>footballStatsApp</artifactId>
     <version>0.1</version>
 
     <packaging>war</packaging>
-    <name>footballApp</name>
-    <description>Football App</description>
+    <name>footballStats</name>
+    <description>Football Stats App</description>
 
     <properties>
         <jdk.version>1.8</jdk.version>
@@ -72,7 +72,7 @@
     </dependencies>
 
     <build>
-        <finalName>football</finalName>
+        <finalName>footballStats</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
