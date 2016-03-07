@@ -1,0 +1,35 @@
+-- Function: public.ins_match_event(integer, integer, character varying, integer, character varying, character varying, integer, character varying)
+
+-- DROP FUNCTION public.ins_match_event(integer, integer, character varying, integer, character varying, character varying, integer, character varying);
+
+CREATE OR REPLACE FUNCTION public.ins_match_event(
+    event_id integer,
+    event_match_id integer,
+    event_type character varying,
+    event_minute integer,
+    event_team character varying,
+    event_player character varying,
+    event_player_id integer,
+    event_result character varying)
+  RETURNS void AS $$
+    BEGIN
+        INSERT INTO public.match (event_id,
+                                event_match_id,
+                                event_type,
+                                event_minute,
+                                event_team,
+                                event_player,
+                                event_player_id,
+                                event_result
+                                )
+	VALUES (event_id,
+            event_match_id,
+            event_type,
+            event_minute,
+            event_team,
+            event_player,
+            event_player_id,
+            event_result
+            );
+    END;
+$$  LANGUAGE plpgsql VOLATILE

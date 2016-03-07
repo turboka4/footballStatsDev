@@ -1,0 +1,63 @@
+-- Function: public.ins_match(integer, integer, integer, character varying, character varying, character varying, character varying, character varying, character varying, integer, character varying, integer, integer, character varying, integer, character varying, character varying, character varying)
+
+-- DROP FUNCTION public.ins_match(integer, integer, integer, character varying, character varying, character varying, character varying, character varying, character varying, integer, character varying, integer, integer, character varying, integer, character varying, character varying, character varying);
+
+CREATE OR REPLACE FUNCTION public.ins_match(
+    match_id integer,
+    match_static_id integer,
+    match_comp_id integer,
+    match_date character varying,
+    match_formatted_date character varying,
+    match_status character varying,
+    match_timer character varying,
+    match_time character varying,
+    match_commentary_available character varying,
+    match_localteam_id integer,
+    match_localteam_name character varying,
+    match_localteam_score integer,
+    match_visitorteam_id integer,
+    match_visitorteam_name character varying,
+    match_visitorteam_score integer,
+    match_ht_score character varying,
+    match_ft_score character varying,
+    match_et_score character varying)
+  RETURNS void AS $$
+    BEGIN
+        INSERT INTO public.match (match_id,
+				match_static_id,
+				match_comp_id,
+				match_date,
+				match_formatted_date,
+				match_status,
+				match_timer,
+				match_time,
+				match_commentary_available,
+				match_localteam_id,
+				match_localteam_name,
+				match_localteam_score,
+				match_visitorteam_id,
+				match_visitorteam_name,
+				match_visitorteam_score,
+				match_ht_score,
+				match_ft_score,
+				match_et_score)
+	VALUES (match_id,
+            match_static_id,
+            match_comp_id,
+            match_date,
+            match_formatted_date,
+            match_status,
+            match_timer,
+            match_time,
+            match_commentary_available,
+            match_localteam_id,
+            match_localteam_name,
+            match_localteam_score,
+            match_visitorteam_id,
+            match_visitorteam_name,
+            match_visitorteam_score,
+            match_ht_score,
+            match_ft_score,
+            match_et_score);
+    END;
+$$ LANGUAGE plpgsql VOLATILE

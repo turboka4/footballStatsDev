@@ -32,4 +32,14 @@ public class TestEntityDaoImpl implements TestEntityDao {
         return jdbcTemplate.query(SELECT_ALL_SQL, testEntityMapper);
     }
 
+    @Override
+    public TestEntity findById(int id) {
+        return null;
+    }
+
+    @Override
+    public void persist(TestEntity entity) {
+
+    }
+
 }

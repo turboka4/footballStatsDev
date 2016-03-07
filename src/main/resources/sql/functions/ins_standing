@@ -1,0 +1,13 @@
+-- Function: public.ins_standing(character varying, integer)
+
+-- DROP FUNCTION public.ins_standing(character varying, integer);
+
+CREATE OR REPLACE FUNCTION public.ins_standing(
+    stand_team_name character varying,
+    stand_position integer)
+  RETURNS void AS $$
+    BEGIN
+        INSERT INTO public.standing (stand_team_name, stand_position)
+	VALUES (stand_team_name, stand_position);
+    END;
+$$ LANGUAGE plpgsql VOLATILE

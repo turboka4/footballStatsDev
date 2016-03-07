@@ -1,0 +1,26 @@
+-- Table: public.matches
+
+-- DROP TABLE public.matches;
+
+CREATE TABLE public.matches
+(
+  id SERIAL PRIMARY KEY,
+  match_id integer,
+  match_static_id integer,
+  match_comp_id integer,
+  match_date character varying(50),
+  match_formatted_date character varying(50),
+  match_status character varying(50),
+  match_timer character varying(50),
+  match_time character varying(50),
+  match_commentary_available character varying(50),
+  match_localteam_id integer,
+  match_localteam_name character varying(50),
+  match_localteam_score integer,
+  match_visitorteam_id integer,
+  match_visitorteam_name character varying(50),
+  match_visitorteam_score integer,
+  match_ht_score character varying(50),
+  match_ft_score character varying(50),
+  match_et_score character varying(50)
+)

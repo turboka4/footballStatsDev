@@ -1,0 +1,16 @@
+-- Table: public.match_events
+
+-- DROP TABLE public.match_events;
+
+CREATE TABLE public.match_events
+(
+  id SERIAL PRIMARY KEY,
+  event_id integer,
+  event_match_id integer,
+  event_type character varying(50),
+  event_minute integer,
+  event_team character varying(50),
+  event_player character varying(50),
+  event_player_id integer,
+  event_result character varying(50)
+)

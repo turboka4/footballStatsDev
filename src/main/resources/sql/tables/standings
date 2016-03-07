@@ -1,0 +1,40 @@
+-- Table: public.standings
+
+-- DROP TABLE public.standings;
+
+CREATE TABLE public.standings
+(
+  id SERIAL PRIMARY KEY,
+  stand_id integer,
+  stand_competition_id integer,
+  stand_season character varying(100),
+  stand_round character varying(100),
+  stand_stage_id integer,
+  stand_group character varying(100),
+  stand_country character varying(100),
+  stand_team_id integer,
+  stand_team_name character varying(100),
+  stand_status character varying(100),
+  stand_recent_form character varying(100),
+  stand_position integer,
+  stand_overall_gp integer,
+  stand_overall_w integer,
+  stand_overall_d integer,
+  stand_overall_l integer,
+  stand_overall_gs integer,
+  stand_overall_ga integer,
+  stand_home_gp integer,
+  stand_home_w integer,
+  stand_home_d integer,
+  stand_home_l integer,
+  stand_home_gs integer,
+  stand_home_ga integer,
+  stand_away_gp integer,
+  stand_away_w integer,
+  stand_away_d integer,
+  stand_away_l integer,
+  stand_away_gs integer,
+  stand_away_ga integer,
+  stand_gd integer,
+  stand_points integer
+)
